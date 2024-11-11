@@ -25,9 +25,8 @@ This is a simple web application built with Node.js, Express, EJS, and CSS, desi
 ### Installation
 
 1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/your-github-username/your-repository-name.git
-   
+     git clone https://github.com/WebPraxiss/Insta-Clone.git
+
 2. Navigate to the project folder:
     cd your-repository-name
    
