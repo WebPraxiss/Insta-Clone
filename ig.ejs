@@ -1,0 +1,58 @@
+<%- include("includes/header.ejs") %>
+<header>
+    <i class="fa-solid fa-less-than"></i>
+    <h1><%= data.name %></h1>
+    <i class="fa-solid fa-list-ul"></i>
+</header>
+<hr>
+
+<section class="profile-section">
+    <div class="profile-header">
+        <img src="<%= data.posts[2].image %>" alt="<%= data.name %>'s profile picture" class="profile-image">
+        <div class="profile-actions">
+            <button class="btn follow-btn">Follow</button>
+            <button class="btn message-btn">Message</button>
+        </div>
+    </div>
+    <div class="profile-stats">
+        <div class="stat">
+            <span class="stat-value"><%= data.followers %></span>
+            <span class="stat-label">Followers</span>
+        </div>
+        <div class="stat">
+            <span class="stat-value"><%= data.following %></span>
+            <span class="stat-label">Following</span>
+        </div>
+    </div>
+</section>
+
+<hr>
+
+<section class="posts-section">
+    <% for (post of data.posts) { %>
+    <article class="post">
+        <img src="<%= post.image %>" alt="Post image" class="post-image">
+        
+        <!-- Likes, Comments, and Share in the same row -->
+        <div class="post-info">
+            <div class="post-action">
+                <i class="fa-solid fa-heart action-icon heart"></i>
+                <span class="post-stats"><%= post.likes %></span>
+            </div>
+            <div class="post-action">
+                <i class="fa-solid fa-comment action-icon comments"></i>
+                <span class="post-stats"><%= post.comments %></span>
+            </div>
+            <div class="post-action">
+                <i class="fa-solid fa-share action-icon"></i>
+                <span class="post-stats"><%= post.shares %></span>
+
+            </div>
+        </div>
+    </article>
+    <% } %>
+</section>
+
+<script src="/app.js"></script>
+</body>
+</html>
